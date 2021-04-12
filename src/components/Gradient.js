@@ -22,4 +22,5 @@ const Gradient = ({ name, colorStart, colorEnd, tags }) => {
   )
 }
 
+
 export default Gradient
