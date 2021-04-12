@@ -1,26 +1,19 @@
 import Gradient from "./Gradient"
+
+
+// Selon la valeur passer dans select (ou non) ; générer la gradient list. 
+
 const GradientsList = () => {
+  /* Créer ou importer une fonction qui génère les éléments gradient 
+  selon la valeur passer dans le formulaire select
+  */
   return (
     <ul className="row list-unstyled">
       <Gradient
         colorStart="rgb(189, 195, 199)"
         colorEnd="rgb(44, 62, 80)"
         name="Grade Grey"
-      />
-      <Gradient
-        colorStart="rgb(31, 64, 55)"
-        colorEnd="rgb(153, 242, 200)"
-        name="Harvey"
-      />
-      <Gradient
-        colorStart="rgb(0, 242, 96)"
-        colorEnd="rgb(5, 117, 230)"
-        name="Rainbow Blue"
-      />
-      <Gradient
-        colorStart="rgb(168, 192, 255)"
-        colorEnd="rgb(63, 43, 150)"
-        name="Slight Ocean View"
+        tags="Grey"
       />
     </ul>
   )
