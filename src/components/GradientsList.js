@@ -1,5 +1,5 @@
 import Gradient from "./Gradient"
-import GradientsList from './GradientsSelect'
+import GradientsSelect from './GradientsSelect'
 
 // Selon la valeur passer dans select (ou non) ; générer la gradient list. 
 
