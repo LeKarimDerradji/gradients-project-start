@@ -19,7 +19,7 @@ const Gradient = ({ name, colorStart, colorEnd, tags, setFilterName}) => {
         <div className="mt-3">
           {tags.map((tag) => {
             return (
-              <GradientTag key={tag} tagName={tag} setFilterName={setFilterName} value={value} setValue={setValue}/>
+              <GradientTag key={tag} tagName={tag} setFilterName={setFilterName} value={value} setValue={setValue} classNameValue={classNameValue} classNameDisabled={classNameDisabled}/>
             )
           })}
         </div>

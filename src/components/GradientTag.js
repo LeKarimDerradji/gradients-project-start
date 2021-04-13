@@ -1,7 +1,7 @@
 import React from "react"
 import {useState} from 'react'
 
-const GradientTag = ({tagName, setFilterName, value, setValue} ) => {
+const GradientTag = ({tagName, setFilterName, value, setValue, classNameValue, classNameDisabled} ) => {
 
  
   
@@ -10,8 +10,6 @@ const GradientTag = ({tagName, setFilterName, value, setValue} ) => {
     setFilterName(tagName)
     setValue(value = true)
   }
-  const classNameValue='btn btn-sm me-2 mb-2 text-light bg-dark'
-  const classNameDisabled='btn btn-sm me-2 mb-2 bg-light'
 
   return (
     <button 
