@@ -1,16 +1,18 @@
-import Header from './components/Header'
-import GradientsApp from './components/GradientsApp'
-
+import GradientsHeader from "./components/Header"
+import Footer from "./components/Footer"
+import GradientsApp from "./components/GradientsApp"
+import React from 'react'
 
 function App() {
-    
   return (
-    <div>
-    <main>
-      <Header/>
-      <GradientsApp />
+    <React.Fragment>
+    <GradientsHeader/>
+      <main className="container">
+        <h1 className="text-center my-4">Alyra Gradients</h1>
+        <GradientsApp />
       </main>
-    </div>
+      <Footer/>
+      </React.Fragment>
   )
 }
 
