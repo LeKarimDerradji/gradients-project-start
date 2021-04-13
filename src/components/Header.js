@@ -16,7 +16,7 @@ const Header = () => {
 
 
     const handleClickEventRandom = (e) => {
-        setIndex(Math.floor(Math.random() * (gradients.length - 0) + 0))
+        setIndex(Math.floor(Math.random() * (gradients.length - 1) + 0))
     }
 
     const handleClickEventNext = (e) => {
@@ -26,7 +26,7 @@ const Header = () => {
 
     return (
       <header className='text-center text-white py-5 mb-5'
-      style={{ backgroundImage}}
+      style={{backgroundImage}}
       >
         
         <h1 className="display-1">Alyra Gradients</h1>

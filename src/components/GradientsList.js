@@ -7,7 +7,7 @@ import {useState} from 'react'
 
 
 
-const GradientsList = ({list}) => {
+const GradientsList = ({list, setFilterName}) => {
  
   return (
     <ul className="row list-unstyled">
@@ -15,6 +15,7 @@ const GradientsList = ({list}) => {
       {list.map((el) => {
         return (
           <Gradient
+            setFilterName={setFilterName}
             key={el.name}
             colorStart={el.start}
             colorEnd={el.end}

@@ -9,11 +9,11 @@ import  {uniqueTags} from '../gradients.js'
 
   
 const GradientsSelect = ({handleSelectChange, tag}) => {
-  
+
     return (
         <div class="input-group mb-3">
           <label class="input-group-text" for="select">Filtrer par tag</label>
-              <select onChange={handleSelectChange} class="form-select" id="select">
+              <select value={tag} onChange={(e) => handleSelectChange(e.target.value)} class="form-select" id="select">
               <option value={tag}>{tag}</option>
               {uniqueTags.map((el) => (
                   <option key={el} value={el}>{el}</option>
@@ -26,7 +26,3 @@ const GradientsSelect = ({handleSelectChange, tag}) => {
 }
 
 export default GradientsSelect
-
-GradientsSelect.defaultProps = {
-    tag: 'Tous'
-}

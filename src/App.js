@@ -3,25 +3,18 @@ import GradientsSelect from './components/GradientsSelect'
 import gradients from './gradients'
 import {useState, useEffect} from 'react'
 import Header from './components/Header'
-import GradientTag from './components/GradientTag'
+import GradientsApp from './components/GradientsApp'
 
 
-function App( {list, tagName} ) {
+function App( {list} ) {
     list = gradients
     // List will be equal to gradients 
     const [filterName, setFilterName] = useState('Tous') // This is a state for the tagName
 
     const [filteredArray, setFilteredArray] = useState([]) // This is the state for the tabTags
 
-
-    const handleClickEvent = (e) => {
-      console.log(tagName)
-    }
-
-    const handleChange = ({currentTarget}) => {
-      const {value} = currentTarget
-      setFilterName(value)
-      console.log(value)
+    const handleChange = (e) => {
+      setFilterName(e.target.value)
     }
 
 
@@ -38,12 +31,9 @@ function App( {list, tagName} ) {
     
   return (
     <div>
+    <main>
       <Header/>
-      <h1 className="text-center my-4">Alyra Gradients</h1>
-      <main className="container">
-      <GradientsSelect handleSelectChange={handleChange}/>
-      <GradientsList list={filteredArray}/>
-      <GradientTag handleClickChange={handleClickEvent} />
+      <GradientsApp />
       </main>
     </div>
   )
