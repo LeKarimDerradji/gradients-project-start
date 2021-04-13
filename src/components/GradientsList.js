@@ -1,7 +1,4 @@
 import Gradient from "./Gradient"
-import gradients from "../gradients"
-import GradientsSelect from './GradientsSelect'
-import {useState} from 'react'
 
 // Selon la valeur passer dans select (ou non) ; générer la gradient list. 
 

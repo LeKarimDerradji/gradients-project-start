@@ -1,6 +1,3 @@
-import reactDom from 'react-dom'
-import {useState} from 'react'
-import gradients from '../gradients'
 import  {uniqueTags} from '../gradients.js'
 
 
@@ -11,9 +8,9 @@ uniqueTags.unshift('Tous')
 const GradientsSelect = ({handleSelectChange, tag}) => {
 
     return (
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="select">Filtrer par tag</label>
-              <select value={tag} onChange={(e) => handleSelectChange(e.target.value)} class="form-select" id="select">
+        <div className="input-group mb-3">
+          <label className="input-group-text" for="select">Filtrer par tag</label>
+              <select value={tag} onChange={(e) => handleSelectChange(e.target.value)} className="form-select" id="select">
               {uniqueTags.map((el) => (
                   <option key={el} value={el}>{el}</option>
                    ))}
