@@ -1,14 +1,11 @@
 import GradientTitle from "./GradientTitle"
 import GradientCode from "./GradientCode"
 import GradientPill from "./GradientPill"
-import GradientTag from "./GradientTag"
-import {useState} from 'react'
+import GradientTags from "./GradientTag"
 
-const Gradient = ({ name, colorStart, colorEnd, tags, setFilterName}) => {
-  let [value, setValue] = useState(false)
 
-  const classNameValue='btn btn-sm me-2 mb-2 text-light bg-dark'
-  const classNameDisabled='btn btn-sm me-2 mb-2 bg-light'
+const Gradient = ({ name, colorStart, colorEnd, tags, setFilterName, filterName}) => {
+
 
   return (
     <li className="col-lg-3 col-md-4 col-sm-6">
@@ -16,14 +13,8 @@ const Gradient = ({ name, colorStart, colorEnd, tags, setFilterName}) => {
         <GradientPill colorStart={colorStart} colorEnd={colorEnd} />
         <GradientTitle>{name}</GradientTitle>
         <GradientCode colorStart={colorStart} colorEnd={colorEnd} />
-        <div className="mt-3">
-          {tags.map((tag) => {
-            return (
-              <GradientTag key={tag} tagName={tag} setFilterName={setFilterName} value={value} setValue={setValue} classNameValue={classNameValue} classNameDisabled={classNameDisabled}/>
-            )
-          })}
+        <GradientTags tags={tags} key={filterName} tagName={filterName} setFilterName={setFilterName} filterName={filterName}/>
         </div>
-      </div>
     </li>
   )
 }

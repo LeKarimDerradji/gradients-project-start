@@ -1,23 +1,24 @@
-import React from "react"
 import {useState} from 'react'
 
-const GradientTag = ({tagName, setFilterName, value, setValue, classNameValue, classNameDisabled} ) => {
 
- 
-  
+const GradientTags = ({tags, setFilterName, filterName}) => {
 
-  const handleClick = (funcOne, funcTwo) => {
-    setFilterName(tagName)
-    setValue(value = true)
-  }
 
   return (
-    <button 
-       onClick={() => handleClick(setFilterName, setValue)} type="button" 
-       disabled={value}
-        className={value ? classNameDisabled : classNameValue}
-        >{tagName}</button>
-  )
+  <div className="mt-3">
+          {tags.map((tag) => {
+            return (
+              <button 
+               onClick={() => setFilterName(tag)} key={tag} type="button" 
+               disabled={filterName === tag}
+               className={filterName === tag ? "btn btn-sm me-2 mb-2 bg-light" : 
+               "btn btn-sm me-2 mb-2 bg-dark text-white"}>{tag}</button>)
+            
+          })}
+        </div>
+          
+          )
+          
 }
 
-export default GradientTag
+export default GradientTags

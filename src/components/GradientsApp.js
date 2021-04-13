@@ -12,26 +12,25 @@ function GradientsApp( {list} ) {
     const [filterName, setFilterName] = useState('Tous')
     
     const [filteredArray, setFilteredArray] = useState([])
-
+    
 
     const handleChange = (value) => {
       setFilterName(value)
+    
       
     }
+
     
-    
-    
+
     useEffect(() => {
-    
-    
     setFilteredArray(filterName === 'Tous' ? gradients : gradients.filter(item => item.tags.includes(filterName)))
 
     }, [filterName])
-    
+
   return (
     <div>
       <GradientsSelect tag={filterName} handleSelectChange={handleChange}/>
-      <GradientsList setFilterName={setFilterName} list={filteredArray}/>
+      <GradientsList filterName={filterName} setFilterName={setFilterName} list={filteredArray}/>
     </div>
   )
 }

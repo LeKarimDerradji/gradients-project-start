@@ -4,7 +4,7 @@ import Gradient from "./Gradient"
 
 
 
-const GradientsList = ({list, setFilterName}) => {
+const GradientsList = ({list, filterName, setFilterName}) => {
  
   return (
     <ul className="row list-unstyled">
@@ -12,6 +12,7 @@ const GradientsList = ({list, setFilterName}) => {
       {list.map((el) => {
         return (
           <Gradient
+            filterName={filterName}
             setFilterName={setFilterName}
             key={el.name}
             colorStart={el.start}
