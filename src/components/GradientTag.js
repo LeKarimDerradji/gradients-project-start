@@ -9,11 +9,11 @@ const GradientTag = ({tagName, setFilterName} ) => {
   const handleClick = (func) => {
     setFilterName(tagName)
   }
-  classNameValue='btn btn-sm me-2 mb-2 text-light bg-dark'
-  classNameDisabled='btn btn-sm me-2 mb-2 bg-light'
+  let classNameValue='btn btn-sm me-2 mb-2 text-light bg-dark'
+  let classNameDisabled='btn btn-sm me-2 mb-2 bg-light'
   const handleOnChange = () => {
-    setValue(value => value = true)
-    classNameDisabled='btn btn-sm me-2 mb-2 bg-light'
+    setdisabledButton(value => value = true)
+    classNameValue={classNameDisabled}
   }
   return <button 
   onChange={handleOnChange}
