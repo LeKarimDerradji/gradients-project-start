@@ -18,7 +18,7 @@ const GradientTag = ({tagName, setFilterName} ) => {
   return <button 
   onChange={handleOnChange}
   onClick={() => handleClick(setFilterName)} type="button" 
-  className={classNameValue}
+  className={disabledButton ? classNameDisabled : classNameValue}
   disabled={disabledButton}
   >{tagName}</button>
 }

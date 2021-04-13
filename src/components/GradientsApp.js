@@ -24,7 +24,7 @@ function GradientsApp( {list} ) {
     useEffect(() => {
     
     
-    setFilteredArray(filterName === 'Tous' ? list  : list.filter(item => item.tags.includes(filterName)))
+    setFilteredArray(filterName === 'Tous' ? gradients : gradients.filter(item => item.tags.includes(filterName)))
 
     }, [filterName])
     
