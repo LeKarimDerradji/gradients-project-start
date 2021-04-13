@@ -1,6 +1,3 @@
-import {useState} from 'react'
-
-
 const GradientTags = ({tags, setFilterName, filterName}) => {
 
 
