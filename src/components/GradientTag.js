@@ -1,8 +1,26 @@
 import React from "react"
+import {useState} from 'react'
 
 const GradientTag = ({tagName, setFilterName} ) => {
-  
-  return <button onClick={(e) => setFilterName(tagName)} type="button" className="btn btn-sm me-2 mb-2 bg-dark text-white">{tagName}</button>
+
+ 
+  const [disabledButton, setdisabledButton] = useState(false)
+
+  const handleClick = (func) => {
+    setFilterName(tagName)
+  }
+  classNameValue='btn btn-sm me-2 mb-2 text-light bg-dark'
+  classNameDisabled='btn btn-sm me-2 mb-2 bg-light'
+  const handleOnChange = () => {
+    setValue(value => value = true)
+    classNameDisabled='btn btn-sm me-2 mb-2 bg-light'
+  }
+  return <button 
+  onChange={handleOnChange}
+  onClick={() => handleClick(setFilterName)} type="button" 
+  className={classNameValue}
+  disabled={disabledButton}
+  >{tagName}</button>
 }
 
 export default GradientTag
