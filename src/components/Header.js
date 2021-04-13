@@ -61,21 +61,22 @@ const ArrowRight = () => {
 
 const GradientsHeader = () => {
 
-  const [gradientIndex, setGradientIndex] = useState(
-    Math.floor(Math.random() * gradients.length)
-  );
-
-  const handleBeforeClick = () => {
-    setGradientIndex((gradientIndex + 1) % gradients.length);
-  };
-  const handleReloadClick = () => {
-    setGradientIndex(Math.floor(Math.random() * gradients.length));
-  };
-  const handleAfterClick = () => {
-    setGradientIndex((gradientIndex - 1) % gradients.length);
-  };
-
-  const backgroundImage = `linear-gradient(to right, ${gradients[gradientIndex].start}, ${gradients[gradientIndex].end})`;
+  
+    const [gradientIndex, setGradientIndex] = useState(
+        Math.floor(Math.random() * gradients.length)
+      );
+    
+      const handleBeforeClick = () => {
+        setGradientIndex((gradientIndex - 1 + gradients.length) % gradients.length);
+      };
+      const handleReloadClick = () => {
+        setGradientIndex(Math.floor(Math.random() * gradients.length));
+      };
+      const handleAfterClick = () => {
+        setGradientIndex((gradientIndex + 1) % gradients.length);
+      };
+    
+      const backgroundImage = `linear-gradient(to right, ${gradients[gradientIndex].start}, ${gradients[gradientIndex].end})`;
 
   const styleOutput = {
     backgroundImage
