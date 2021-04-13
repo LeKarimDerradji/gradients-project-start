@@ -6,7 +6,7 @@ import  {uniqueTags} from '../gradients.js'
 
 
   // Todo créer le form GradientsSelect 
-
+uniqueTags.unshift('Tous')
   
 const GradientsSelect = ({handleSelectChange, tag}) => {
 
@@ -14,7 +14,6 @@ const GradientsSelect = ({handleSelectChange, tag}) => {
         <div class="input-group mb-3">
           <label class="input-group-text" for="select">Filtrer par tag</label>
               <select value={tag} onChange={(e) => handleSelectChange(e.target.value)} class="form-select" id="select">
-              <option value={tag}>{tag}</option>
               {uniqueTags.map((el) => (
                   <option key={el} value={el}>{el}</option>
                    ))}
@@ -25,4 +24,9 @@ const GradientsSelect = ({handleSelectChange, tag}) => {
     
 }
 
+GradientsSelect.defaultProps = {
+  tag: 'Tous'
+}
+
 export default GradientsSelect
+

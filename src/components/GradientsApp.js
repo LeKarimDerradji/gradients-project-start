@@ -5,16 +5,6 @@ import {useState, useEffect} from 'react'
 import GradientsList from './GradientsList'
 
 
-/*
-function sortByTagName (value) {
-    const [filterName, setFilterName] = useState('Tous')
-    const getTagName = () => {
-        setFilterName(value)
-    }
-    return [filterName, setFilterName]
-}
-*/
-
 
 function GradientsApp( {list} ) {
     list = gradients
